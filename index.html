@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPACIAL DOM PRACTICE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav class="sticky top-0 z-10">
+        <div class="flex justify-around bg-zinc-500 opacity-90 py-6 text-xl">
+            <h1>Budget: <span class="text-white" id="total_budget">2500</span> $</h1>
+            <h1>Cart: <span class="text-white" id="count_number">0</span></h1>
+            <h1>left: <span class="text-white" id="left_number">8</span> </h1>
+        </div>
+    </nav>
+    <section class="lg:flex justify-between container mx-auto gap-6 mt-12">
+      <div class="Lg:w-3/5">
+        <div class="lg:flex gap-8 mb-7">
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Tamim Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span id="">300</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Bat</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Mumin Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span id="">400</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Ball</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Somin Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span id="">300</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Ball</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:flex gap-8 mb-7">
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Tamim Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span>300</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Ball</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Mumin Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span>500</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Bat</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Somin Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span>300</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Ball</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:flex gap-8 mb-7">
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Tamim Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span>200</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Bat</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Mumin Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span>400</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Ball</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Somin Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span>400</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Ball</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:flex gap-8 mb-7">
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Tamim Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span>300</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Bat</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Mumin Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span>500</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Ball</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="card lg:w-64 w-3/4 mx-auto bg-base-100 shadow-2xl mb-3 lg:mb-0">
+            <div class="card-body">
+              <h2 class="text-center text-2xl font-bold">Somin Iqbal</h2>
+              <h2 class="text-center text-xl">Price: <span>300</span> $</h2>
+              <h2 class="text-center text-xl">Category: <span>Ball</span></h2>
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary add-btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full" id="calculation_part">
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h2 class="text-4xl font-bold mb-4 text-center">My Cart</h2>
+            <hr />
+            <div class="flex justify-around">
+              <h1 id="player_name">Name</h1>
+              <h1>Price</h1>
+              <h1>Category</h1>
+            </div>
+            <div id="new_div" class=" ">
+
+            </div>
+            <hr />
+            <h1 class="text-center text-2xl font-semibold">Total Cost: <span id="total_tk"></span> $</h1>
+            <hr />
+            <div>
+              <input type="text" name="" class="border p-2 rounded-lg" id="input_value" placeholder="Coupon Code"/>
+              <button class="ml-2 bg-green-500 px-3 py-2 text-white rounded-lg" id="apply_btn">Apply</button>
+            </div>
+            <hr />
+            <h1 class="text-2xl text-center">Grand Total: <span id="grand_total">0</span> $</h1>
+            <div class="card-actions justify-end">
+              <button class="btn btn-primary text-xl btn-disabled" id="Confirm" onclick="hideOption()">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal" class="hidden">
+        <div class="card w-full bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h2 class="text-center text-3xl text-green-500">Success!!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="flex justify-center">
+              <button class="btn bg-green-600 text-white" onclick="backAgain()">Home</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
