@@ -5,6 +5,7 @@ let budget = 2500;
 let left = 8;
 for(const btn of addCartButtons){
     btn.addEventListener('click',function(event){
+        btn.disabled = true;
         const playerName = event.target.parentNode.parentNode.childNodes[1].innerText;
 
         const playerPrice = event.target.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
@@ -91,8 +92,12 @@ function changGrandTotal(element){
         confirmBtn.classList.remove('btn-disabled')
         element = element - (element * (20/100));
         grandTotal.innerText = element;
+        const inputButton = document.getElementById('input_button');
+        inputButton.classList.add('hidden');
     }
     else{
+        const inputButton = document.getElementById('input_value');
+        inputButton.style.border = 'solid red'
         
     }
     
@@ -113,5 +118,9 @@ function backAgain(){
     const calculationPart = document.getElementById('calculation_part')
     calculationPart.classList.remove('hidden');
 }
+
+// function removeInput(){
+//     document.getElementById('input_value').value = '';
+// }
 
 
